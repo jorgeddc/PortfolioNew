@@ -11,9 +11,11 @@ hamburguer.addEventListener('click', e=>{
     e.preventDefault();
     navegador.classList.toggle('active')
     document.querySelector('.barra1').classList.toggle('active')
- 
+    document.querySelector('.barra0').classList.toggle('active')
+    document.querySelector('.barra2').classList.toggle('active')
     
-    document.querySelector('.navegador-grande').style.top='13px'
+    
+    document.querySelector('.navegador-grande').classList.toggle('active')
 })
 
 aboutMe.addEventListener('click', e=>{
@@ -22,22 +24,20 @@ aboutMe.addEventListener('click', e=>{
     document.querySelector('.container__main-home-aboutme').classList.toggle('active')
 })
 
-aboutMe.addEventListener('click', e =>{
-    e.preventDefault()
-    document.querySelector('.navegador-grande').style.top='-150px'
-})
+
 
 circle1.addEventListener('mouseover', ()=>{
 
     document.querySelectorAll('span')[0].style.opacity='1'
     document.querySelectorAll('span')[0].style.top='-20px'
-  
+    document.querySelector('.circles1').style.transform = 'rotate(180deg)';
 
 })
 circle2.addEventListener('mouseover', ()=>{
 
     document.querySelectorAll('span')[1].style.opacity='1'
     document.querySelectorAll('span')[1].style.top='-20px'
+    document.querySelector('.circles2').style.transform = 'rotate(180deg)';
   
 
 })
@@ -45,6 +45,8 @@ circle3.addEventListener('mouseover', ()=>{
 
     document.querySelectorAll('span')[2].style.opacity='1'
     document.querySelectorAll('span')[2].style.top='-20px'
+    document.querySelector('.circles3').style.transform = 'rotate(180deg)';
+
   
 
 })
@@ -52,6 +54,9 @@ circle4.addEventListener('mouseover', ()=>{
 
     document.querySelectorAll('span')[3].style.opacity='1'
     document.querySelectorAll('span')[3].style.top='-20px'
+    
+    document.querySelector('.circles4').style.transform = 'rotate(180deg)';
+
   
 
 })
