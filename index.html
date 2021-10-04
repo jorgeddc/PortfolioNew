@@ -26,34 +26,44 @@
 </head>
 
 <body>
-  
+  <div class="container-back"> 
+
+    <div class="container-projects-b">
+        <div class="draft1-b"></div>
+        <div class="draft2-b"></div>
+        <div class="draft3-b"></div>
+        <div class="draft4-b"></div>
+
+    </div>
+  <div class="container-color-back-one"></div>
+  <div class="container-color-back-two"></div>
+</div> 
 <div class="container-navegador">
 <div class="hamburguer" id="hamburger">
         
-    <button class="container-h containerBack">
+    <button class="container-h containerBack" id='home'>
+        <!-- El id Home le da constancia a la funciona FIXNAV -->
         <div class="barra1"></div>
         <div class='barra0'></div>
         <div class='barra2'></div>
         
-
+    </div>
     </button>
 </div>
 <ul class='navegador-grande'>
-    <li class='navegador-item '> <a href="#" id='about-me'>About-me</a>
-    </li>
-    <li class='navegador-item'><a href="#" >Education</a></li>
-    <li class='navegador-item'><a href="#" >Experience</a></li>
-    <li class='navegador-item navegador-item-skill'><a href="#">Skills</a> </li>
+    <li class='navegador-item '> <a href="#" class='about-me-b'>Sobre mi</a> </li>
+    <li class='navegador-item'><a href="#" class='projects-b'>Proyectos</a></li>
+    <li class='navegador-item'><a href="#" >Objetivo</a></li>
+    
 </ul>
 
-<ul class='navegador'>
-        <li class='navegador-item '> <a href="#" id='about-me'>About-me</a>
-         </li>
-        <li class='navegador-item'><a href="#" >Education</a></li>
-        <li class='navegador-item'><a href="#" >Experience</a></li>
-        <li class='navegador-item navegador-item-skill'><a href="#">Skills</a> </li>
+<ul class='navegador' >
+        <li class='navegador-item '> <a href="#aboutme" class='about-me-s'>Sobre mi</a>  </li>
+        <li class='navegador-item'><a href="#projects" class='projects-s'>Proyectos</a></li>
+        <li class='navegador-item'><a href="#" >Objetivo</a></li>
+        
     </ul>
-</div>
+
 <div class="container-presentacion">
     <div id='circle1'> <i class="fas fa-circle-notch circles1"></i><span>Hola</span></div>
     <div id='circle2'><i class="fas fa-circle-notch circles2"></i><span>soy Jorge</span></div>
@@ -62,33 +72,27 @@
 </div>
    
 
-
+<section >
 <div class="container__main">
-
- 
-
-    
-      <!-- <section class='square'> -->
-        
-            <div  class="square-container">
+ <div  class="square-container">
                
 
                  <span class='up'>  </span>
                  <span class='left'></span>
                  <span class='right'></span>
                 <span class='down'></span>
-                <div class="container__main-home-hithere">   
-                    <img class='perfil-img' src="yo.jpeg" alt=""> 
-                    <div class="container__main-home-aboutme">
-                        <div class="title"><h1>About-me</h1></div>
-                                <div class="container-img"> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea necessitatibus sint error cum ipsum sequi ratione autem nulla nostrum, inventore officia corporis eveniet eligendi sunt. Doloremque ex numquam ipsum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis temporibus inventore deserunt commodi rem voluptatibus expedita, modi perspiciatis sit, ad, id quasi quas deleniti non? Labore perspiciatis obcaecati nam.
-                                    
-                                </p></div> 
-                            </div>
-                </div> 
+               
+                   
+                        
+                                <div class="container-img"> 
+                                    <h1>About-me</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea necessitatibus sint error cum ipsum sequi ratione autem nulla nostrum, inventore officia corporis eveniet eligendi sunt. Doloremque ex numquam ipsum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis temporibus inventore deserunt commodi rem voluptatibus expedita, modi perspiciatis sit, ad, id quasi quas deleniti non? Labore perspiciatis obcaecati nam.<br><br>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore tenetur modi   
+                                </p> 
+                            
+                            
                 </div>
                 
-        
+</div>
             
               <div class="redes-sociales">
                 <a class="curriculum" href="curriculum.html"> <p>Download C.V </p>  </a> 
@@ -97,19 +101,25 @@
                     <a href="https://www.linkedin.com/in/jorge-d%C3%ADaz-delgado-carrillo-a5756454/"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.facebook.com/jorge.diazdelgadocarrillo/"><i class="fab fa-facebook-f"></i></a>
                 </div> 
-            
-             
-        <!-- </section> -->
-    </div>
+            </div>
+          
+            </div>
+           
+        </section>
+        <a href="#home" class="arrow-up"> <i class="fa fa-angle-double-up " aria-hidden="true"></i></a> 
+        <div class="container-projects" id='projects'>
+            <div class="draft1"></div>
+            <div class="draft2"></div>
+            <div class="draft3"></div>
+            <div class="draft4"></div>
     
-    <div class='container__main-home'>  
+        </div>
 
-    </div>
-    
-</div>
+
+        
 <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".square-container"), {
+    VanillaTilt.init(document.querySelector(".square-container" ), {
         max: 25,
         speed: 400
     });
