@@ -1,107 +1,174 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-const hamburguer = document.querySelector('.hamburguer')
-const aboutMeS = document.querySelector('.about-me-s')
-const aboutMeB = document.querySelector('.about-me-b')
-const navegadorItem=document.querySelector('.navegador')
-const projectsB=document.querySelector('.projects-b')
-const circle1  = document.querySelector('.circles1')
-const circle2  = document.querySelector('.circles2')
-const circle3  = document.querySelector('.circles3')
-const circle4  = document.querySelector('.circles4')
-const arrowApear  = document.querySelector('.arrow-up')
-const home = document.getElementById('home')
-
-
-hamburguer.addEventListener('click', e=>{
-    e.preventDefault();
-    console.log('click')
-    navegadorItem.classList.toggle('active')
+ document.addEventListener('DOMContentLoaded', ()=>{
     
-    document.querySelector('.barra1').classList.toggle('active')
-    document.querySelector('.barra0').classList.toggle('active')
-    document.querySelector('.barra2').classList.toggle('active')
-    
-    
-     document.querySelector('.navegador-grande').classList.toggle('active')
-})
-
-aboutMeS.addEventListener('click', e=>{
-    e.preventDefault()
-   
-   
-    document.querySelector('.container-img').classList.toggle('active')
-})
-aboutMeB.addEventListener('click', e=>{
-    e.preventDefault()
+  
+  
+    const DayNight = document.querySelector('.daynight')
+    const active = document.querySelector('.active')
+    const hobby =  document.querySelector('.hobby')
+    const viajar =  document.querySelector('.viajar')
+    const containerSobremi = document.getElementById('sobre-mi')
+    const contenedorSlide = document.querySelectorAll('.slide')
+    const arrowLeft = document.querySelector('.arrow-left')
+    const arrowRight = document.querySelector('.arrow-right')
+    let pixels = 700;
+    let cont=0;
+    let contProgress=0
     
    
-    document.querySelector('.container-img').classList.toggle('active')
-})
 
-projectsB.addEventListener('click' , e=>{
-    e.preventDefault()
-const navegadorItem=document.querySelector('.navegador')
-    document.querySelector('.container-color-back-two').classList.toggle('active')
-})
 
-circle1.addEventListener('mouseover', ()=>{
+    DayNight.addEventListener('click', ()=>{
+        document.querySelector('body').classList.toggle('active')
+        document.querySelector('.square-container1').classList.toggle('active')
+        document.querySelector('.square-container2').classList.toggle('active')
+        document.querySelector('.square-container3').classList.toggle('active')
+        document.querySelector('.circle').classList.toggle('active')    
+        document.querySelector('.container-daynight').classList.toggle('active')
+        document.querySelector('.curriculum').classList.toggle('active')    
+        document.querySelector('.raya1').classList.toggle('active')    
+        document.querySelector('.raya2').classList.toggle('active')    
+        document.querySelector('.raya3').classList.toggle('active')    
+    })
 
-    document.querySelectorAll('span')[0].style.opacity='1'
-    document.querySelectorAll('span')[0].style.top='-10px'
-    document.querySelector('.circles1').style.transform = 'rotate(180deg)';
-
-})
-circle2.addEventListener('mouseover', ()=>{
-
-    document.querySelectorAll('span')[1].style.opacity='1'
-    document.querySelectorAll('span')[1].style.top='-10px'
-    document.querySelector('.circles2').style.transform = 'rotate(180deg)';
+  hobby.addEventListener('mouseover' , () =>{
+   document.querySelector('.container-image').style.opacity='0.8'
+   document.querySelector('.container-image').style.top='-160px'
+   document.querySelector('.container-image').style.transform='rotate(-16deg)'
   
+   
+  })
+  hobby.addEventListener('mouseleave' , () =>{
+   document.querySelector('.container-image').style.opacity='0'
+   document.querySelector('.container-image').style.top='0px'
+    })
+ 
+    
+    
+viajar.addEventListener('click' , e =>{
+e.preventDefault()
+viajar.classList.toggle('active')
+setInterval(progressPhoto,1000)
+
+
+
+ cont++;
+ contenedorSlide.forEach( element=>{
+    element.style.transform=`translatex(${cont * -pixels}px)`
+   document.querySelector('.arrow-right').classList.toggle('active')
+   document.querySelector('.arrow-left').classList.toggle('active')
+   document.querySelector('.l1').classList.toggle('active')
+   document.querySelector('.l2').classList.toggle('active')
+   document.querySelector('.r1').classList.toggle('active')
+   document.querySelector('.r2').classList.toggle('active')
+    document.getElementById('sobre-mi').classList.toggle('active')
+  //  document.getElementById('sobre-mi').style.backgroundImage = `url(Espaldas.jpg)`
+
+   if (cont>=2)
+    {
+    element.style.transform=`translatex(0px)`
+     cont=0;
+
+   }
+  })
 
 })
-circle3.addEventListener('mouseover', ()=>{
 
-    document.querySelectorAll('span')[2].style.opacity='1'
-    document.querySelectorAll('span')[2].style.top='-10px'
-    document.querySelector('.circles3').style.transform = 'rotate(180deg)';
+arrowLeft.addEventListener('click' , e =>{
+  e.preventDefault()
+console.log(cont)
 
+if (cont>=2){// este if no permite pasar al texto de sobre mi
+  if (cont!=0) //este if obliga a dar a viajar para que sume 
+  cont--;
+
+ 
+  contenedorSlide.forEach( element=>{
+    element.style.transform=`translatex(${cont * -pixels}px)`
+    // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
+
+    let dato = cont * pixels
+    console.log(cont , dato)
+  })
   
-
-})
-circle4.addEventListener('mouseover', ()=>{
-
-    document.querySelectorAll('span')[3].style.opacity='1'
-    document.querySelectorAll('span')[3].style.top='-10px'
-    
-    document.querySelector('.circles4').style.transform = 'rotate(180deg)';
-
-  
-
-})
-
-window.addEventListener('scroll', fixNav)
-
-function fixNav()
-
-
- {
-     console.log(home.offsetHeight)
-     
-    if(window.scrollY > home.offsetHeight + 10 ) {
-        arrowApear.classList.add('active')
-        console.log('nuer')
-        
-    
-        } 
-    
-        else {
-        arrowApear.classList.remove('active')
-     
-      
-
-        
- }
-
-
+ 
 }
 })
+
+arrowRight.addEventListener('click' , e =>{
+  e.preventDefault()
+
+if (cont!=0) //este if obliga a dar a viajar para que sume 
+  cont++;
+  
+  contenedorSlide.forEach( element=>{
+    arrowRight.style.zIndex='1'
+    element.style.transform=`translatex(${cont * -pixels}px)`
+    // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
+    let dato = cont * -pixels
+    console.log(cont , dato)
+    if (cont>=5)
+    {
+      
+      element.style.transform=`translatex(-2800px)`
+      cont=4
+    
+    }
+    
+  })
+
+})
+
+function trasladarFoto()
+{
+  
+  
+  
+  contenedorSlide.forEach( element=>{
+    arrowRight.style.zIndex='1'
+    element.style.transform=`translatex(${cont * -pixels}px)`
+    // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
+    let dato = cont * -pixels
+    console.log(cont , dato)
+    if (cont>=5)
+    {
+      
+      element.style.transform=`translatex(-2800px)`
+      cont=4
+    
+    }
+   
+  })
+  cont++;
+}
+
+function progressPhoto () {
+   
+  contProgress++
+ if (contProgress<=4){
+
+        document.querySelector('.progres').innerHTML = `${contProgress}%` 
+ }
+     
+     if ( contProgress==4){
+     cont++
+      trasladarFoto()
+        contProgress=0
+     
+     }
+      if (cont==3) 
+        {
+            console.log("he perque")
+            cont=0;
+            cont=0
+            // cuadro.style.transform=`translateX(${-cont * 500}px)`
+
+
+        }
+
+
+
+
+      }
+    })
+
+
