@@ -1,0 +1,96 @@
+.redes-sociales{
+    width:90%;
+    margin-top:20px;
+    margin-left:20px;
+    justify-content:space-between;
+    align-items:center;
+    display:flex;
+  
+    /* position:fixed;
+     */
+}
+    
+    .rrss {
+        width:60px;
+        display:flex;
+        align-items:center;
+       
+        flex-direction: column;
+        top:0px;
+        height:150px;
+       
+         }
+    
+    .redes-sociales a i {
+        font-size: 35px;
+        color:black;
+        transition: 0.2s;
+        margin:5px;
+    }
+    
+    .redes-sociales a i:hover {
+        color: rgb(85, 81, 81);
+        
+    }
+  
+    
+    .rrss a , .rrss a i{
+        text-decoration:none;
+        color:rgb(165, 162, 162);
+        
+        padding:0 10px;
+        
+    }
+    .rrss a i:hover{
+        
+        color:black;
+      transform:rotate(10deg);
+      text-shadow:1px 1px 5px  white;
+     transition:0.2s linear;
+      
+    }
+
+    
+
+.curriculum {
+    
+    text-decoration:none;
+    width:120px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.curriculum p{
+    font-size:25px;
+    color:rgb(165, 162, 162);
+    text-transform:uppercase;  
+    
+}
+
+
+.curriculum:hover{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:120px;
+    height:50px;
+    /* letter-spacing: 5px; */
+    transition:0.4s linear; 
+    background-color:white;  
+    color:black;  
+    box-shadow:1px 1px 15px  white;
+}
+
+.curriculum.active:hover{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:250px;
+    height:50px;
+    letter-spacing: 5px;
+    transition:0.4s linear; 
+    background-color:black;  
+    color:white;  
+    box-shadow:1px 1px 20px black;
+}

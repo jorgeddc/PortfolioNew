@@ -1,0 +1,117 @@
+/*PERFIL */
+.container__main{
+    
+    display:flex;
+    width: 100%;
+    height:50vh;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction:column; 
+    
+}
+.square-container1{
+    display:flex;
+    justify-content:center;
+   background-color:rgb(41, 40, 40);
+   width:100%;
+  
+   margin-top:180px;
+   position:relative;
+   z-index: 1;
+   
+   
+   }
+   .square-container1.active{
+       background-color:white; 
+   }
+   .square-container1 p{
+      position:absolute;
+      font-size:50px;
+      top:-140px;
+      letter-spacing:10px;
+      animation:textoPresentacion 1s linear;
+      color:rgb(165, 162, 162);
+
+   }
+
+   .square-container2{
+       display:flex;
+       justify-content:center;
+        width:100%;
+        align-items:center;
+      
+       height:50px;
+      background-color:white;
+       animation:textoPresentacion2 2s linear;
+       transition:1.5s ease;
+       z-index:1;
+
+
+       
+       }
+       .square-container2.active{
+           background-color:rgb(41, 40, 40);
+           color:white;
+       }
+    
+       .square-container2 p{
+           position:absolute;
+           font-size:45px;
+           position:absolute;
+           /* top:310px; */
+           letter-spacing:10px;
+           /* animation:textoPresentacion2 1s linear; */
+
+        }
+
+        .square-container3{
+           display:flex;
+           justify-content:center;
+           background-color:rgb(41, 40, 40);
+           width:100%;
+           min-width:500px;
+           height:50px;
+            z-index: 1;
+       
+           position:relative;}
+          
+           .square-container3.active{
+               background-color:white;
+               
+           }
+          
+           .square-container3 p{
+               position:absolute;
+               font-size:50px;
+               top:-40px;
+               letter-spacing:10px;
+               color:rgb(165, 162, 162);
+               animation:textoPresentacion3 1s linear;
+            }
+
+    @keyframes textoPresentacion {
+       0%{
+           top:-80px;
+       }
+       100%{
+           top:-140px;
+       }
+   } 
+   @keyframes textoPresentacion2 {
+       0%{
+           background-color:rgb(41, 40, 40);}
+          
+       100%{
+           background-color:white;
+         
+       }
+   }
+
+   @keyframes textoPresentacion3{
+    0%{
+        top:50px;
+    }
+    100%{
+        top:-40px;
+    }
+} 

@@ -2,7 +2,9 @@
     
   
   
-    const DayNight = document.querySelector('.daynight')
+    const DayNight = document.querySelector
+    ('.daynight')
+ 
     const active = document.querySelector('.active')
     const hobby =  document.querySelector('.hobby')
     const viajar =  document.querySelector('.viajar')
@@ -10,25 +12,42 @@
     const contenedorSlide = document.querySelectorAll('.slide')
     const arrowLeft = document.querySelector('.arrow-left')
     const arrowRight = document.querySelector('.arrow-right')
+    const hamburguer = document.querySelector('.hamburguer')
     let pixels = 700;
     let cont=0;
     let contProgress=0
+    var progres 
+    
     
    
 
-
-    DayNight.addEventListener('click', ()=>{
+    
+    hamburguer.addEventListener('click', e =>{
+    
+      document.querySelector('.barra0').classList.toggle('active')
+      document.querySelector('.barra1').classList.toggle('active')
+      document.querySelector('.barra2').classList.toggle('active')
+      document.querySelector('.container-navegador-small').classList.toggle('active')
+    
+    
+    })
+    DayNight.addEventListener('click', (e)=>{
+        e.preventDefault()
+        console.log('click')
         document.querySelector('body').classList.toggle('active')
         document.querySelector('.square-container1').classList.toggle('active')
         document.querySelector('.square-container2').classList.toggle('active')
         document.querySelector('.square-container3').classList.toggle('active')
         document.querySelector('.circle').classList.toggle('active')    
-        document.querySelector('.container-daynight').classList.toggle('active')
+        document.querySelector('.container-daynight-big').classList.toggle('active')
+        document.querySelector('.container-daynight-small').classList.toggle('active')
         document.querySelector('.curriculum').classList.toggle('active')    
         document.querySelector('.raya1').classList.toggle('active')    
         document.querySelector('.raya2').classList.toggle('active')    
         document.querySelector('.raya3').classList.toggle('active')    
     })
+
+  
 
   hobby.addEventListener('mouseover' , () =>{
    document.querySelector('.container-image').style.opacity='0.8'
@@ -46,12 +65,21 @@
     
 viajar.addEventListener('click' , e =>{
 e.preventDefault()
+document.querySelector('.cuenta').style.display='block'
 viajar.classList.toggle('active')
-setInterval(progressPhoto,1000)
 
+if(e.target.classList.contains('active')){
+  
+activaProgres()
+}
 
+if(!e.target.classList.contains('active')){
 
- cont++;
+desactivaProgres()
+}
+ 
+
+ cont++
  contenedorSlide.forEach( element=>{
     element.style.transform=`translatex(${cont * -pixels}px)`
    document.querySelector('.arrow-right').classList.toggle('active')
@@ -62,7 +90,7 @@ setInterval(progressPhoto,1000)
    document.querySelector('.r2').classList.toggle('active')
     document.getElementById('sobre-mi').classList.toggle('active')
   //  document.getElementById('sobre-mi').style.backgroundImage = `url(Espaldas.jpg)`
-
+ 
    if (cont>=2)
     {
     element.style.transform=`translatex(0px)`
@@ -71,11 +99,13 @@ setInterval(progressPhoto,1000)
    }
   })
 
+
 })
 
 arrowLeft.addEventListener('click' , e =>{
   e.preventDefault()
-console.log(cont)
+  contProgress=0
+  
 
 if (cont>=2){// este if no permite pasar al texto de sobre mi
   if (cont!=0) //este if obliga a dar a viajar para que sume 
@@ -96,6 +126,8 @@ if (cont>=2){// este if no permite pasar al texto de sobre mi
 
 arrowRight.addEventListener('click' , e =>{
   e.preventDefault()
+  contProgress=0
+
 
 if (cont!=0) //este if obliga a dar a viajar para que sume 
   cont++;
@@ -106,6 +138,7 @@ if (cont!=0) //este if obliga a dar a viajar para que sume
     // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
     let dato = cont * -pixels
     console.log(cont , dato)
+    
     if (cont>=5)
     {
       
@@ -118,54 +151,66 @@ if (cont!=0) //este if obliga a dar a viajar para que sume
 
 })
 
+
+function activaProgres()
+{  progres = setInterval(progressPhoto,50)
+ 
+}
+
+function desactivaProgres()
+{ clearInterval(progres)
+  document.querySelector('.cuenta').style.display='none'
+}
+
 function trasladarFoto()
-{
-  
-  
-  
-  contenedorSlide.forEach( element=>{
+{ console.log(cont)
+   cont++
+   contenedorSlide.forEach( element=>{
     arrowRight.style.zIndex='1'
     element.style.transform=`translatex(${cont * -pixels}px)`
     // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
     let dato = cont * -pixels
-    console.log(cont , dato)
+    
     if (cont>=5)
     {
+      if (cont>=2){// este if no permite pasar al texto de sobre mi
+     
+        cont=1
+        contenedorSlide.forEach( element=>{
+          element.style.transform=`translatex(${cont * -pixels}px)`
+          // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
       
-      element.style.transform=`translatex(-2800px)`
-      cont=4
-    
+          let dato = cont * pixels
+          console.log(cont , dato)
+        })
+        
+       
+      }
     }
    
   })
-  cont++;
+  
 }
 
 function progressPhoto () {
-   
+  
   contProgress++
- if (contProgress<=4){
+ if (contProgress<=100){
 
         document.querySelector('.progres').innerHTML = `${contProgress}%` 
  }
      
-     if ( contProgress==4){
-     cont++
+     if (contProgress==100){
+    
       trasladarFoto()
         contProgress=0
      
      }
-      if (cont==3) 
-        {
-            console.log("he perque")
-            cont=0;
-            cont=0
-            // cuadro.style.transform=`translateX(${-cont * 500}px)`
 
+    
+  
 
-        }
-
-
+  
 
 
       }

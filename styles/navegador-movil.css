@@ -1,0 +1,172 @@
+    /* HAMBURGUER */
+
+   .navegador-grande{display:none;}
+    .container-navegador{
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+    }
+    .hamburguer {
+    width: 68px;
+    height: 30px;
+    display: flex;
+    position:relative;
+    left:10px;
+    top:-10px;
+    cursor:pointer;
+    align-items: center; 
+    
+    z-index: 2;
+    }
+
+
+
+    .container-h {
+    width: 60px;
+    height: 100px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-top: 4rem;
+    margin-right: 2rem;
+    position: absolute;
+    padding-left: 0 15px;
+    
+    
+    } 
+
+    .barra1.active {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 75%;
+    height: 3px;
+    background-color:  var(--letter);
+    transition: 0.4s;
+    z-index:1;
+    
+    transform:rotate(50deg);
+    
+
+    }
+
+    .barra0 {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 100%;
+    height: 3px;
+    background-color:  var(--letter);
+
+    transition: 0.4s;
+    z-index:1;
+    
+    }
+
+    .barra0.active{
+    opacity:0;
+    }
+
+
+    .barra2 {
+    
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 75%;
+    height: 3px;
+    background-color:  var(--letter);
+
+    transition: 0.4s;
+    
+
+    }
+
+    .barra2.active {
+    transform:rotate(-50deg);
+    }
+
+
+    
+/* DAY NIGTH */
+
+    .container-daynight-small{
+    position:relative;
+    right:14px;
+    width:60px;
+    height:30px;
+    background-color: black;
+    border-radius:20px;
+    cursor:pointer;
+    
+    }
+
+    .container-daynight-small.active{
+    position:relative;
+    right:14px;
+    width:60px;
+    height:30px;
+    background-color:var(--letter);
+    border-radius:20px;
+    cursor:pointer;
+    
+    }
+    .container-daynight-small .circle.active{
+    position:absolute;
+    
+    width:25px;
+    height:25px;
+    top:2px;
+    left:2px;
+    border-radius:30px ;
+    background-color:white;
+    transition:0.4s linear;
+    }
+    .container-daynight-small .circle{
+    position:absolute;
+    
+    width:25px;
+    height:25px;
+    top:2px;
+    left:29px;
+    border-radius:30px ;
+    background-color:rgb(41, 40, 40);
+    transition:0.4s linear;
+
+
+    }
+
+    .container-navegador-small{
+    width:100%;
+    height:0px;
+    align-items:center;
+    overflow:hidden;
+    transition:0.4s ease-in-out;
+
+    
+    }
+    .container-navegador-small.active{
+    height:162px;
+    
+    }
+    .navegador-small {
+    
+    text-align:center;
+    margin:0;
+    padding:0;
+    
+    }
+
+
+    .navegador-small li,.navegador-small a {
+
+    text-decoration: none;
+    list-style: none;
+    color:var(--letter);
+    font-size:25px;
+    letter-spacing:1px;
+    margin:15px;
+    }
