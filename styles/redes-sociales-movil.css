@@ -6,8 +6,8 @@
     align-items:center;
     display:flex;
   
-    /* position:fixed;
-     */
+    /* position:fixed; */
+    
 }
     
     .rrss {
@@ -60,6 +60,8 @@
     display:flex;
     justify-content: center;
     align-items:center;
+    
+  
 }
 .curriculum p{
     font-size:25px;
