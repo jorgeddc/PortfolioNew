@@ -27,23 +27,30 @@ navegador.forEach(element =>{
  element.addEventListener('click' , e =>{
   if(e.target.classList.contains('about-me-b'))
    {
-     element.classList.toggle('activo')
-     navegador[1].classList.toggle('activo-fondo')
-     navegador[2].classList.toggle('activo-fondo')
+     element.classList.add('activo')
+   navegador[1].classList.add('activo-fondo')
+   navegador[2].classList.add('activo-fondo')
+   console.log(navegador[1].textContent)
   
    
    }
    if(e.target.classList.contains('projects-b'))
-   {
-    element.classList.toggle('activo')
-    navegador[0].classList.toggle('activo-fondo')
-    navegador[2].classList.toggle('activo-fondo')
+   { console.log(navegador[0].textContent,navegador[2].textContent)
+     navegador[1].classList.remove('activo-fondo')
+     navegador[2].classList.remove('activo-fondo')
+     navegador[0].classList.remove('activo')
+     navegador[2].classList.remove('activo')
+
+     element.classList.add('activo')
+    
    }  
    if(e.target.classList.contains('objetivo-b'))
    {
-    element.classList.toggle('activo')
-    navegador[0].classList.toggle('activo-fondo')
-    navegador[1].classList.toggle('activo-fondo')
+    element.classList.add('activo')
+    navegador[0].classList.remove('activo-fondo')
+    navegador[1].classList.remove('activo-fondo')
+    navegador[1].classList.remove('activo')
+
    } 
  })
 

@@ -70,7 +70,7 @@
     z-index:1;
     position:absolute;}
 
-    .navegador-item.activo::before
+    .activo::before
     {
         content:'';
         border-bottom:2px solid white;
@@ -80,7 +80,7 @@
         z-index:1;
         position:absolute;}
 
-        .navegador-item.activo-fondo::before
+        .activo-fondo::before
         {
             content:'';
             border-bottom:2px solid rgb(41, 40, 40);
@@ -98,6 +98,15 @@
     z-index:-1;
     top:-140px;
     position:absolute;}
+    .activo-fondo-w::before
+    {
+        content:'';
+        border-bottom:2px solid rgb(41, 40, 40);
+        width:90px;
+        height:200px;
+        top:-140px;
+        z-index:1;
+        position:absolute;}
     
     .container-daynight-big{
         position:relative;
