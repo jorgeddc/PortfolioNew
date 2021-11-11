@@ -5,6 +5,8 @@
         const DayNight = document.querySelector('.daynight')
         const DayNightB = document.querySelector('.daynightB')
         const active = document.querySelector('.active')
+        const activo = document.querySelector('.activo')
+        const activoFondo = document.querySelector('.activo-fondo')
         const hobby =  document.querySelector('.hobby')
         const viajar =  document.querySelector('.viajar')
         const containerSobremi = document.getElementById('sobre-mi')
@@ -13,14 +15,40 @@
         const arrowRight = document.querySelector('.arrow-right')
         const hamburguer = document.querySelector('.hamburguer')
         const proyecto = document.querySelectorAll('.itemP')
+        const navegador = document.querySelectorAll('.navegador-item')
        
         let pixels = 700;
         let cont=0;
         let contProgress=0
         var progres   
      
+navegador.forEach(element =>{
 
-        console.log(proyecto.length)
+ element.addEventListener('click' , e =>{
+  if(e.target.classList.contains('about-me-b'))
+   {
+     element.classList.toggle('activo')
+     navegador[1].classList.toggle('activo-fondo')
+     navegador[2].classList.toggle('activo-fondo')
+  
+   
+   }
+   if(e.target.classList.contains('projects-b'))
+   {
+    element.classList.toggle('activo')
+    navegador[0].classList.toggle('activo-fondo')
+    navegador[2].classList.toggle('activo-fondo')
+   }  
+   if(e.target.classList.contains('objetivo-b'))
+   {
+    element.classList.toggle('activo')
+    navegador[0].classList.toggle('activo-fondo')
+    navegador[1].classList.toggle('activo-fondo')
+   } 
+ })
+
+})
+       
         proyecto.forEach( (element,index)  => {
         
           element.addEventListener('mouseover', (e) =>{
@@ -31,9 +59,9 @@
         
 
           })
-       
-    
-  
+     
+          
+     
 
 
         hamburguer.addEventListener('click', e =>{
