@@ -1,28 +1,39 @@
- document.addEventListener('DOMContentLoaded', ()=>{
-    
+document.addEventListener('DOMContentLoaded', ()=>{
   
   
-        const DayNight = document.querySelector('.daynight')
-        const DayNightB = document.querySelector('.daynightB')
-        const active = document.querySelector('.active')
-        const activo = document.querySelector('.activo')
-        const activoFondo = document.querySelector('.activo-fondo')
-        const hobby =  document.querySelector('.hobby')
-        const viajar =  document.querySelector('.viajar')
-        const containerSobremi = document.getElementById('sobre-mi')
-        const contenedorSlide = document.querySelectorAll('.slide')
-        const arrowLeft = document.querySelector('.arrow-left')
-        const arrowRight = document.querySelector('.arrow-right')
-        const hamburguer = document.querySelector('.hamburguer')
-        const proyecto = document.querySelectorAll('.itemP')
-        const navegador = document.querySelectorAll('.navegador-item')
-       
+  
+          const DayNight = document.querySelector('.daynight')
+          const magic = document.querySelector('.magic')
+          const DayNightB = document.querySelector('.daynightB')
+          const active = document.querySelector('.active')
+          const activo = document.querySelector('.activo')
+          const activoFondo = document.querySelector('.activo-fondo')
+          const hobby =  document.querySelector('.hobby')
+          const viajar =  document.querySelector('.viajar')
+          const containerSobremi = document.getElementById('sobre-mi')
+          const contenedorSlide = document.querySelectorAll('.slide')
+          const arrowLeft = document.querySelector('.arrow-left')
+          const arrowRight = document.querySelector('.arrow-right')
+          const hamburguer = document.querySelector('.hamburguer')
+          const proyecto = document.querySelectorAll('.itemP')
+          const navegador = document.querySelectorAll('.navegador-item')
+          const nav = document.querySelector('.navegador-grande')
+        
         let pixels = 700;
         let cont=0;
         let contProgress=0
         var progres   
-     
-navegador.forEach(element =>{
+        
+        // window.addEventListener('scroll', fixNav)
+        //       function fixNav() {
+        //                 if(window.scrollY > nav.offsetHeight + 770) {
+        //                     document.querySelector('.about-me-b').classList.add('activo')
+        //                 } else {
+                          
+        //                 }
+        //               }
+
+  navegador.forEach(element =>{
 
  element.addEventListener('click' , e =>{
   if(e.target.classList.contains('about-me-b'))
@@ -30,35 +41,38 @@ navegador.forEach(element =>{
      element.classList.add('activo')
    navegador[1].classList.add('activo-fondo')
    navegador[2].classList.add('activo-fondo')
-   console.log(navegador[1].textContent)
+ 
   
    
    }
    if(e.target.classList.contains('projects-b'))
    { console.log(navegador[0].textContent,navegador[2].textContent)
-     navegador[1].classList.remove('activo-fondo')
-     navegador[2].classList.remove('activo-fondo')
-     navegador[0].classList.remove('activo')
-     navegador[2].classList.remove('activo')
+    navegador[1].classList.remove('activo-fondo')
+    navegador[2].classList.remove('activo-fondo')
+    navegador[0].classList.remove('activo')
+    navegador[2].classList.remove('activo')
 
-     element.classList.add('activo')
+    element.classList.add('activo')
     
-   }  
-   if(e.target.classList.contains('objetivo-b'))
-   {
+  }  
+  if(e.target.classList.contains('objetivo-b'))
+  {
     element.classList.add('activo')
     navegador[0].classList.remove('activo-fondo')
     navegador[1].classList.remove('activo-fondo')
+    navegador[2].classList.remove('activo-fondo')
     navegador[1].classList.remove('activo')
+    navegador[0].classList.remove('activo')
 
-   } 
- })
+    
+  } 
+})
 
 })
-       
-        proyecto.forEach( (element,index)  => {
-        
-          element.addEventListener('mouseover', (e) =>{
+
+proyecto.forEach( (element,index)  => {
+  
+  element.addEventListener('mouseover', (e) =>{
             e.preventDefault()
           element.classList.toggle('active')
 
@@ -284,9 +298,72 @@ navegador.forEach(element =>{
         }
 
         }
+        
+        magic.addEventListener('click', e =>{
+          magic.classList.toggle('active')
+          
+          
+          
+        })
+        
+        
+        //  MAQUINA DE ESCRIBIR
+      
+        const vivir = document.querySelector('.vivir')
+        const disfrutando = str =>
+        {
+          let arrFromStr= str.split('') // LE PASSA UNA ARRAY 
+          let i=0;
+          let printStr=setInterval(function (){
+            vivir.textContent += arrFromStr[i];
+            
+            i++;
+            if (i === arrFromStr.length) {
+              
+              vivir.textContent =""  
+              aprendiendo('seguir aprendiendo')
+              
+            }  },200) };
+         
+            disfrutando('seguir disfrutando')
 
-       
 
+                
+      const aprendiendo = (string) =>{
+
+        let array = string.split('') // LE PASSA UNA ARRAY
+        let j=0;
+        let imprimir = setInterval(function (){
+        vivir.textContent += array[j];
+         j++
+          if (j===array.length)
+         
+          {  
+            vivir.textContent =""  
+            trabajar('aportar mi experiencia para un bien comun.')
+        }
+
+
+        },200)
+      }          
+      const trabajar = (cadena) =>{
+
+        let palabra = cadena.split('') // LE PASSA UNA ARRAY
+       console.log(palabra)
+        let t=0;
+        let pintar = setInterval(function ()
+        {
+         
+          console.log(t)
+          vivir.textContent += palabra[t];
+         t++
+          if (t===palabra.length)
+         {  clearInterval(pintar)
+        }
+
+
+        },200)
+      }   
     })
 
 
