@@ -310,60 +310,54 @@ proyecto.forEach( (element,index)  => {
         //  MAQUINA DE ESCRIBIR
       
         const vivir = document.querySelector('.vivir')
-        const disfrutando = str =>
-        {
-          let arrFromStr= str.split('') // LE PASSA UNA ARRAY 
-          let i=0;
-          let printStr=setInterval(function (){
-            vivir.textContent += arrFromStr[i];
-            
-            i++;
-            if (i === arrFromStr.length) {
-              
-              vivir.textContent =""  
-              aprendiendo('seguir aprendiendo')
-              
-            }  },200) };
-         
-            disfrutando('seguir disfrutando')
+      
+        let dinamico = 0
+        let caso = 0
+        let firstStr 
 
-
-                
-      const aprendiendo = (string) =>{
-
-        let array = string.split('') // LE PASSA UNA ARRAY
-        let j=0;
-        let imprimir = setInterval(function (){
-        vivir.textContent += array[j];
-         j++
-          if (j===array.length)
-         
-          {  
-            vivir.textContent =""  
-            trabajar('aportar mi experiencia para un bien comun.')
+        const frasesEmo = (caso) => {
+          switch (caso) {
+            case 1:
+              vivir.innerText=" "
+              firstStr = 'disfrutando'
+             
+              break;
+            case 2:
+              vivir.innerText=" "
+              firstStr = 'desarrollando'
+              break;
+           
+            case 3:
+              vivir.innerText=" "
+              firstStr = 'creando'
+              break;
+          
+           
         }
+        }    
+        const writing = () => {
+          console.log(firstStr)
+          if (caso==0){
+            caso=1
+            frasesEmo(caso)
+          }
+          const firstPrhase = firstStr.split('')
+          vivir.innerText+=firstStr[dinamico]
+          dinamico++
+          if ( dinamico>=firstPrhase.length) 
+          { caso++
 
+          dinamico=0
+          frasesEmo(caso)
 
-        },200)
-      }          
-      const trabajar = (cadena) =>{
+          if (caso>=4)
+          { 
+          caso=0
+          }
+          }
+         }
+      const parar = setInterval(writing,400)
 
-        let palabra = cadena.split('') // LE PASSA UNA ARRAY
-       console.log(palabra)
-        let t=0;
-        let pintar = setInterval(function ()
-        {
-         
-          console.log(t)
-          vivir.textContent += palabra[t];
-         t++
-          if (t===palabra.length)
-         {  clearInterval(pintar)
-        }
-
-
-        },200)
-      }   
     })
 
 
