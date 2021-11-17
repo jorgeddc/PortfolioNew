@@ -311,52 +311,59 @@ proyecto.forEach( (element,index)  => {
       
         const vivir = document.querySelector('.vivir')
       
-        let dinamico = 0
         let caso = 0
         let firstStr 
-
+        let dinamico = 0
+        
+        
+        
         const frasesEmo = (caso) => {
           switch (caso) {
             case 1:
               vivir.innerText=" "
-              firstStr = 'disfrutando'
-             
+              firstStr = `Ayudarte en tus proyectos WEB`
+              
               break;
-            case 2:
-              vivir.innerText=" "
-              firstStr = 'desarrollando'
-              break;
-           
-            case 3:
-              vivir.innerText=" "
-              firstStr = 'creando'
-              break;
-          
-           
-        }
-        }    
-        const writing = () => {
-          console.log(firstStr)
-          if (caso==0){
-            caso=1
-            frasesEmo(caso)
+              case 2:
+               vivir.innerText=" "
+                firstStr = 'Formar parte de tu equipo.'
+                break;
+                
+                case 3:
+                 vivir.innerText=" "
+                  firstStr = 'Compartir experiencias profesionales.'
+                  console.log(firstStr.length)
+                  break;
+                  
+                  
+                }
+              }    
+              const writing = () => {
+                
+                 if (caso==0){
+                  caso=1
+                  frasesEmo(caso)
+            
           }
-          const firstPrhase = firstStr.split('')
-          vivir.innerText+=firstStr[dinamico]
+         let sentence=firstStr.split('')
+       
+          vivir.innerHTML+=sentence[dinamico]
           dinamico++
-          if ( dinamico>=firstPrhase.length) 
-          { caso++
-
-          dinamico=0
-          frasesEmo(caso)
+      
+          if ( dinamico>firstStr.length) 
+          { 
+            caso++
+            dinamico=0
+            frasesEmo(caso)
 
           if (caso>=4)
           { 
+            vivir.innerText=" "
           caso=0
           }
           }
          }
-      const parar = setInterval(writing,400)
+      const parar = setInterval(writing,200)
 
     })
 
