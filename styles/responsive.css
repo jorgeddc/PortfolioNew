@@ -85,59 +85,26 @@
 .navegador-item:hover::before
 {
     content:'';
-    border-bottom:2px solid white;
+    border-bottom:2px solid var(--letter);
     width:90px;
     height:200px;
     top:-140px;
     z-index:1;
     position:absolute;}
+   
+
 
     .activo::before
     {
         content:'';
-        border-bottom:2px solid white;
+        border-bottom:2px solid var(--letter);
         width:90px;
         height:200px;
         top:-140px;
         z-index:1;
         position:absolute;}
 
-        .activo-fondo::before
-        {
-            content:'';
-            border-bottom:2px solid rgb(41, 40, 40);
-            width:90px;
-            height:200px;
-            top:-140px;
-            z-index:1;
-            position:absolute;}
 
-            .activo.active::before
-                {
-        border-bottom:2px solid black;
-                    
-                }
-            .activo-fondo.active::before
-            {border-bottom:2px solid white;
-            }
-
- .raya1.active:hover::before, .raya2.active:hover::before, .raya3.active:hover::before{
-    content:'';
-    border-bottom:2px solid black;
-    width:90px;
-    height:200px;
-    z-index:-1;
-    top:-140px;
-    position:absolute;}
-    .activo-fondo-w::before
-    {
-        content:'';
-        border-bottom:2px solid rgb(41, 40, 40);
-        width:90px;
-        height:200px;
-        top:-140px;
-        z-index:1;
-        position:absolute;}
     
     .container-daynight-big{
         position:relative;

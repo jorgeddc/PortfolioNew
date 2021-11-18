@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           const arrowRight = document.querySelector('.arrow-right')
           const hamburguer = document.querySelector('.hamburguer')
           const proyecto = document.querySelectorAll('.itemP')
-          const navegador = document.querySelectorAll('.navegador-item')
+         
           const nav = document.querySelector('.navegador-grande')
           
         
@@ -26,43 +26,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         var progres   
         
    
-// ENCENDIDO Y APAGADO DE NAVEGADOR
-  navegador.forEach(element =>{
 
- element.addEventListener('click' , e =>{
-  if(e.target.classList.contains('about-me-b'))
-   {
-     element.classList.add('activo')
-   navegador[1].classList.add('activo-fondo')
-   navegador[2].classList.add('activo-fondo')
- 
-  
-   
-   }
-   if(e.target.classList.contains('projects-b'))
-   { console.log(navegador[0].textContent,navegador[2].textContent)
-    navegador[1].classList.remove('activo-fondo')
-    navegador[2].classList.remove('activo-fondo')
-    navegador[0].classList.remove('activo')
-    navegador[2].classList.remove('activo')
-
-    element.classList.add('activo')
-    
-  }  
-  if(e.target.classList.contains('objetivo-b'))
-  {
-    element.classList.add('activo')
-    navegador[0].classList.remove('activo-fondo')
-    navegador[1].classList.remove('activo-fondo')
-    navegador[2].classList.remove('activo-fondo')
-    navegador[1].classList.remove('activo')
-    navegador[0].classList.remove('activo')
-
-    
-  } 
-})
-
-})
 
 proyecto.forEach( (element,index)  => {
   
@@ -127,6 +91,8 @@ proyecto.forEach( (element,index)  => {
           document.querySelector('.magic').classList.toggle('active') 
           document.querySelector('.activo').classList.toggle('active') 
           document.querySelector('.activo-fondo').classList.toggle('active') 
+         
+          
           
         
         
