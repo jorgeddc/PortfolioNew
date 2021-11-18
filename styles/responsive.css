@@ -46,7 +46,29 @@
             z-index:1;
          
             }
+.correo {
+    position:relative;
+    color:var(--letter);
+    width:5%;
+    font-size:40px;
+    text-align:right;
+    z-index:2;
+}
+.contacta {
+    
+    position:absolute;
+    left:40px;
+    z-index:1;
+    color:var(--letter);
 
+    opacity:0;
+    transition:0.4s linear;
+}
+.correo:hover + .contacta {
+    left:90px;
+    opacity:1;
+
+}
                 .container-navegador-grande ul {
                 width:100%;
                 height:60px;
@@ -89,6 +111,15 @@
             top:-140px;
             z-index:1;
             position:absolute;}
+
+            .activo.active::before
+                {
+        border-bottom:2px solid black;
+                    
+                }
+            .activo-fondo.active::before
+            {border-bottom:2px solid white;
+            }
 
  .raya1.active:hover::before, .raya2.active:hover::before, .raya3.active:hover::before{
     content:'';
@@ -781,35 +812,31 @@
     position:relative;
     display:block;
     width:100%;height:auto;
-    overflow:hidden;
+   
   
 }
 
-.container-magic .magic{
+ .magic{
     
     position:absolute;
-    cursor:pointer;
-    top:50%;
+    width: 45%;height:60px;
+    top:123%;
     left:50%;
     transform:translate(-50%, -50%);
-    width:25px;height:25px;
-    border-radius:150px;
     box-shadow:1px 1px 15px  white;
     z-index: 2;
     opacity:1;
     animation:latidos 2.5s linear infinite;
     transition:0.4s linear;
-
-}
-
-.magic.active {
-    cursor:pointer;
-    transform:translate(-50%, -50%);
-    width: 95%;height:95%;
     box-shadow:1px 1px 15px  white;
     transition:0.4s linear;
-    z-index: 2;}
+}
 
+
+.magic.active {
+    box-shadow:1px 5px 15px  black;
+
+}
 
 
 @keyframes latidos {
@@ -833,7 +860,7 @@
     
 }
  .magic-text {
-     padding:2em;
+     
     position:relative;
     text-align:center;
     font-size:50px;
@@ -843,7 +870,11 @@
    }
    .vivir {
        
-  
+ position:absolute;
+ top:120%;
+ left:50%;
+ transform:translate(-50%, -50%);
+   
      
    }
 

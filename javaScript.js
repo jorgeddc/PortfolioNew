@@ -18,21 +18,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
           const proyecto = document.querySelectorAll('.itemP')
           const navegador = document.querySelectorAll('.navegador-item')
           const nav = document.querySelector('.navegador-grande')
+          
         
         let pixels = 700;
         let cont=0;
         let contProgress=0
         var progres   
         
-        // window.addEventListener('scroll', fixNav)
-        //       function fixNav() {
-        //                 if(window.scrollY > nav.offsetHeight + 770) {
-        //                     document.querySelector('.about-me-b').classList.add('activo')
-        //                 } else {
-                          
-        //                 }
-        //               }
-
+   
+// ENCENDIDO Y APAGADO DE NAVEGADOR
   navegador.forEach(element =>{
 
  element.addEventListener('click' , e =>{
@@ -96,45 +90,48 @@ proyecto.forEach( (element,index)  => {
         })
         DayNight.addEventListener('click', (e)=>{
         e.preventDefault()
-        // console.log('click')
+    
         document.querySelector('body').classList.toggle('active')
         document.querySelector('.square-container1').classList.toggle('active')
         document.querySelector('.square-container2').classList.toggle('active')
         document.querySelector('.square-container3').classList.toggle('active')
         document.querySelector('.circle').classList.toggle('active')    
         document.querySelector('.container-daynight-small').classList.toggle('active')
-        // document.querySelector('.container-daynight-big').classList.toggle('active')
         document.querySelector('.curriculum').classList.toggle('active')
         document.querySelector('.raya1').classList.toggle('active')    
         document.querySelector('.raya2').classList.toggle('active')    
         document.querySelector('.raya3').classList.toggle('active') 
-         
         document.querySelector('.octo-cat').classList.toggle('active')    
         document.querySelector('.octo-cato').classList.toggle('active')    
+         
+       
 
         } )
+      
         DayNightB.addEventListener('click', (e)=>{
           e.preventDefault()
-          console.log('click')
           document.querySelector('body').classList.toggle('active')
           document.querySelector('.square-container1').classList.toggle('active')
           document.querySelector('.square-container2').classList.toggle('active')
           document.querySelector('.square-container3').classList.toggle('active')
           document.querySelector('.circleB').classList.toggle('active')    
-          // document.querySelector('.container-daynight-small').classList.toggle('active')
           document.querySelector('.container-daynight-big').classList.toggle('active')
           document.querySelector('.curriculum').classList.toggle('active')
           document.querySelector('.raya1').classList.toggle('active')    
           document.querySelector('.raya2').classList.toggle('active')    
           document.querySelector('.raya3').classList.toggle('active') 
           document.querySelector('.diferent').classList.toggle('active') 
-           
           document.querySelector('.octo-cat').classList.toggle('active')    
           document.querySelector('.octo-cat1').classList.toggle('active')    
           document.querySelector('.octo-cat2').classList.toggle('active')    
-          // document.querySelector('.octo-cato').classList.toggle('active')    
-  
-          } )
+          document.querySelector('.magic').classList.toggle('active') 
+          document.querySelector('.activo').classList.toggle('active') 
+          document.querySelector('.activo-fondo').classList.toggle('active') 
+          
+        
+        
+          
+         } )
   
 
 
@@ -321,47 +318,57 @@ proyecto.forEach( (element,index)  => {
           switch (caso) {
             case 1:
               vivir.innerText=" "
+         
+             
               firstStr = `Ayudarte en tus proyectos WEB`
               
               break;
               case 2:
-               vivir.innerText=" "
+                vivir.innerText=" "
+          
+               
                 firstStr = 'Formar parte de tu equipo.'
+                
                 break;
                 
                 case 3:
-                 vivir.innerText=" "
-                  firstStr = 'Compartir experiencias profesionales.'
-                  console.log(firstStr.length)
-                  break;
-                  
-                  
+                  vivir.innerText=" "
+              
+
+                 firstStr = 'Compartir experiencias profesionales.'
+                 
+                 console.log(firstStr.length)
+                 break;
+                 
+                 
                 }
               }    
               const writing = () => {
                 
-                 if (caso==0){
+                if (caso==0){
                   caso=1
                   frasesEmo(caso)
-            
-          }
-         let sentence=firstStr.split('')
-       
-          vivir.innerHTML+=sentence[dinamico]
-          dinamico++
-      
-          if ( dinamico>firstStr.length) 
-          { 
-            caso++
-            dinamico=0
-            frasesEmo(caso)
-
-          if (caso>=4)
-          { 
-            vivir.innerText=" "
-          caso=0
-          }
-          }
+                  
+                }
+                let sentence=firstStr.split('')
+                
+                vivir.innerHTML+=sentence[dinamico]
+                dinamico++
+               
+                
+                if ( dinamico>firstStr.length) 
+                { 
+                  caso++
+                  dinamico=0
+                  frasesEmo(caso)
+                 
+                  
+                  if (caso>=4)
+                  { 
+                    vivir.innerText=" "
+                    caso=0
+                  }
+                }
          }
       const parar = setInterval(writing,200)
 
