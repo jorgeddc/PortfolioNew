@@ -1,6 +1,6 @@
 /********************SOBRE MI **************/
 #sobre-mi{
-    margin-top:-200px;
+    
 width: 100%;
 height:100vh;
 transition:1s ease-in-out;
@@ -16,7 +16,7 @@ height:150px;
 #sobre-mi.active{
 
 width: 100%;
-height:100vh;
+height:150vh;
 background-image: url('/imagenes/Espaldas.jpg');
 background-size: cover; 
 background-repeat: no-repeat;
@@ -182,19 +182,20 @@ transition:0.4s linear;
 
 
 .container-descripcion{
+  width:100%;
+  height:190px;
+  justify-content:center;
+  align-items:flex-end;
+  position:relative;
+  top:50px;
+  z-index: 2;
+  font-size:20px;
+  padding:1em;
+  color:var(--letter);
 
-
-width:100%;
-height:190px;
-justify-content:center;
-align-items:flex-end;
-position:relative;
-top:50px;
-z-index: 2;
-font-size:20px;
-padding:1em;
-color:var(--letter);
 }
+
+
 
 .hobby {
 color:var(--letter);;
