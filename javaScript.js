@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           const nav = document.querySelector('.navegador-grande')
           
         
-        let pixels = 700;
+        let pixels =700;
         let cont=0;
         let contProgress=0
         var progres   
