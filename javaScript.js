@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           const nav = document.querySelector('.navegador-grande')
           
         
-        let pixels =700;
+        let pixels =550;
         let cont=0;
         let contProgress=0
         var progres   
@@ -52,11 +52,14 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.circle').classList.toggle('active')    
             document.querySelector('.container-daynight-small').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
-            document.querySelector('.raya1').classList.toggle('active')    
-            document.querySelector('.raya2').classList.toggle('active')    
-            document.querySelector('.raya3').classList.toggle('active') 
+            // document.querySelector('.raya1').classList.toggle('active')    
+            // document.querySelector('.raya2').classList.toggle('active')    
+            // document.querySelector('.raya3').classList.toggle('active') 
+            // document.querySelector('.octo-cat').classList.toggle('active')    
+            // document.querySelector('.octo-cato').classList.toggle('active')
             document.querySelector('.octo-cat').classList.toggle('active')    
-            document.querySelector('.octo-cato').classList.toggle('active')    
+            document.querySelector('.octo-cat1').classList.toggle('active')    
+            document.querySelector('.octo-cat2').classList.toggle('active')      
             
             
             
@@ -71,15 +74,15 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.circleB').classList.toggle('active')    
             document.querySelector('.container-daynight-big').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
-            document.querySelector('.raya1').classList.toggle('active')    
-            document.querySelector('.raya2').classList.toggle('active')    
-            document.querySelector('.raya3').classList.toggle('active') 
+            // document.querySelector('.raya1').classList.toggle('active')    
+            // document.querySelector('.raya2').classList.toggle('active')    
+            // document.querySelector('.raya3').classList.toggle('active') 
             document.querySelector('.diferent').classList.toggle('active') 
             document.querySelector('.octo-cat').classList.toggle('active')    
             document.querySelector('.octo-cat1').classList.toggle('active')    
             document.querySelector('.octo-cat2').classList.toggle('active')    
             document.querySelector('.magic').classList.toggle('active') 
-            document.querySelector('.activo').classList.toggle('active') 
+            // document.querySelector('.activo').classList.toggle('active') 
             document.querySelector('.activo-fondo').classList.toggle('active') 
             
             

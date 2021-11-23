@@ -28,13 +28,13 @@ transition:1s ease-in-out;
 
 .contenedor {
   display:flex; 
-  width:700px;
+  width:550px;
   height:290px; 
   overflow:hidden;  
 
 } 
 .contenedor img {
-width: 700px;
+width: 550px;
 object-position: center;
 object-fit:cover;
 }
@@ -42,7 +42,7 @@ object-fit:cover;
 .texto {
   top:-120px;
   left:10px;
-  width:700px;
+  width:550px;
   height:390px;
   position:relative;
 
