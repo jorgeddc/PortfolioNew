@@ -83,7 +83,8 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.octo-cat2').classList.toggle('active')    
             document.querySelector('.magic').classList.toggle('active') 
             // document.querySelector('.activo').classList.toggle('active') 
-            document.querySelector('.activo-fondo').classList.toggle('active') 
+            // document.querySelector('.activo-fondo').classList.toggle('active') 
+            document.querySelector('.container-navegador-grande').classList.toggle('active') 
             
             
             

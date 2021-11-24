@@ -1,8 +1,8 @@
     /* HAMBURGUER */
 
    .navegador-grande{display:none;}
-   .correo{display:none;}
-   .contacta{display:none;}
+   .container-correo-grande{display:none;}
+   .contacta{visibility:none}
     
    .container-navegador{
         width:100%;
