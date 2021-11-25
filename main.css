@@ -1,9 +1,11 @@
+
 @import url('styles/presentacion-movil.css');
 @import url('styles/sobre-mi-movil.css');
 @import url('styles/redes-sociales-movil.css');
 @import url('styles/navegador-movil.css');
-@import url('styles/responsive.css');
 @import url('styles/proyectos-movil.css');
+@import url('styles/objetivos-movil.css');
+@import url('styles/footer-movil.css');
 
 :root {
     --letter:  rgb(165, 162, 162);
