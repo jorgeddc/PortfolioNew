@@ -94,6 +94,7 @@
         font-size:190px;
         transform:rotate(-5deg);
         color:var(--letter);
+       
         margin:0px 0 0 60px;
        
     
@@ -101,7 +102,9 @@
     .container-magic {
         position:relative;
         display:block;
-        width:100%;height:auto;
+        width:100%;
+        height:auto;
+        
        
       
     }

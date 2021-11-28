@@ -3,7 +3,7 @@ const navegador = document.querySelectorAll('.navegador-item')
 navegador.forEach(element =>{
 
     element.addEventListener('click' , e =>{
-     if(e.target.classList.contains('about-me-b'))
+     if(e.target.classList.contains('about-me-b') )
       {
           console.log(e.target)
         element.classList.add('activo')

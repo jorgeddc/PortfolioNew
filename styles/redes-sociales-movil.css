@@ -13,7 +13,7 @@
     
 }
     
-.rrss {
+.rrss  {
         width:60px;
         display:flex;
         align-items:center;
@@ -24,7 +24,7 @@
        
          }
     
-    .redes-sociales a i {
+    .redes-sociales a i  {
         font-size: 35px;
         color:black;
         transition: 0.2s;
