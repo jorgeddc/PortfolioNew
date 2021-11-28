@@ -214,7 +214,7 @@ left:40px;
 position:absolute;
 width:250px;
 height:200px;
-background-image:url('/imagenes/guitarra.jpg');
+background-image:url('../imagenes/guitarra.jpg');
 background-size:cover;
 background-repeat: no-repeat;
 transition:1s ease-in-out;
