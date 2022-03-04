@@ -1,4 +1,5 @@
 /********************SOBRE MI **************/
+
 .white-spaceS{height:150px; }
 #sobre-mi{
   
@@ -41,16 +42,73 @@ position:relative;
 cursor:pointer;
 z-index:1;
 }
-.slidePicture  {
-  text-decoration: none;
-color:var(--letter);
-border-bottom:3px solid var(--letter)
+
+
+.container-image{
+  width:180px;
+  height:120px;
+  background-image:url('../imagenes/code.jpg');
+  background-size:contain;
+  background-repeat: no-repeat;
+  transition:1s ease-in-out;
+  top:50%;
+  left:50%;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  
+opacity:0;
+box-shadow:1px 1px 5px var(--letter);
+
+/* pointer-events: none; */
+
+
 
 }
-.slidePicture.active{
-color:white;
-text-shadow: 1px 1px 15px black;
+
+@media (min-width:500px){
+.white-spaceS{height:150px; }
+#sobre-mi{
+  
+  width: 100%;
+  height:auto;
+  transition:1s ease-in-out;
+  
+}   
+.container-sobremi{
+  display:flex;
+width:100%;
+height:350px;
+flex-direction: column;
+align-items: center;
+margin-bottom:150px;
+
+
 }
+.texto {
+  
+  transform:rotate(-5deg);
+  color:var(--letter);
+  font-size:120px;
+}
+.container-descripcion{
+  position:relative;
+  width:100%;
+  height:190px;
+  font-size:20px;
+  padding:1em;
+  color:var(--letter);
+
+}
+  
+
+.hobby {
+color:var(--letter);
+border-bottom:3px solid var(--letter);
+position:relative;
+cursor:pointer;
+z-index:1;
+}
+
 
 .container-image{
   width:250px;
@@ -72,7 +130,7 @@ box-shadow:1px 1px 5px var(--letter);
 
 
 }
-
+}
 
 @media(min-width:1100px){
   

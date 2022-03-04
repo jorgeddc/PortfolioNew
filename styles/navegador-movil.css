@@ -1,5 +1,218 @@
     /* HAMBURGUER */
+    
+    .navegador-grande{display:none;}
+    .container-correo-grande{display:none;}
+    .contacta{visibility:none}
+     
+    .container-navegador {
+        width:100%;
+        height:50px;
+        display:flex;
+        position:fixed;
+        justify-content:space-around;
+        align-items:center;
+        z-index:9999;
+        top:15px;
+     
+    }
+    .hamburguer {
+        width: 68px;
+         height: 30px;
+         display: flex;
+         position:fixed;
+        
+         left:10px;
+         top:10px;
+         cursor:pointer;
+         align-items: center; 
+         z-index: 2;
+        }
+        
+        .container-navegador-small{
+            width:230px;
+            height:0px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            overflow:hidden; 
+            margin-left:8px;
+            background-color:rgb(18, 18, 18, 0.8);
+            transition:0.4s ease-in-out;
+            position:absolute;
+            
+           
+                top:-10px;
+                left:50px;
 
+
+            }
+            .container-navegador-small.active{
+        
+                height:200px;
+                border-radius:0 0 10px 10px;
+               
+      
+        
+     
+                
+ 
+         
+         }
+         .navegador-small {
+            
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+         justify-content: space-around;
+      
+       
+         
+         }
+     
+     
+         .navegador-small li,.navegador-small a {
+     
+         text-decoration: none;
+         list-style: none;
+         color:var(--letter);
+         font-size:25px;
+         letter-spacing:1px;
+         margin:5px;
+         }
+         .navegador-small li:hover{
+             border-bottom:1px solid var(--letter);
+         }
+ 
+         .container-correo.active{
+             display:none;
+         }
+ .container-correo .correo-s {
+     color:var(--letter);
+     font-size: 35px;
+ }
+  .contacta-s {
+     color:var(--letter);
+     position:absolute;
+     left:-2px;
+     top:20px;
+     opacity:0;
+ } 
+     .container-h {
+     width: 60px;
+     height: 100px;
+     cursor: pointer;
+     background: none;
+     border: none;
+     margin-top: 4rem;
+     margin-right: 2rem;
+     position: absolute;
+     padding-left: 0 15px;
+     
+     
+     } 
+ 
+     .barra1.active {
+     position: absolute;
+     top: 30px;
+     left: 10px;
+     width: 75%;
+     height: 3px;
+     background-color:  var(--letter);
+     transition: 0.4s;
+     z-index:1;
+     
+     transform:rotate(50deg);
+     
+ 
+     }
+ 
+     .barra0 {
+     position: absolute;
+     top: 20px;
+     left: 10px;
+     width: 100%;
+     height: 3px;
+     background-color:  var(--letter);
+ 
+     transition: 0.4s;
+     z-index:1;
+     
+     }
+ 
+     .barra0.active{
+     opacity:0;
+     }
+ 
+ 
+     .barra2 {
+     
+     position: absolute;
+     top: 30px;
+     left: 10px;
+     width: 75%;
+     height: 3px;
+     background-color:  var(--letter);
+ 
+     transition: 0.4s;
+     
+ 
+     }
+ 
+     .barra2.active {
+     transform:rotate(-50deg);
+     }
+ 
+ 
+     
+ /* DAY NIGTH */
+ 
+     .container-daynight-small{
+     position:fixed;
+     right:13px;
+     width:60px;
+     height:30px;
+     background-color: black;
+     border-radius:20px;
+     cursor:pointer;
+     
+     }
+ 
+     .container-daynight-small.active{
+     position:fixed;
+     right:14px;
+     width:60px;
+     height:30px;
+     background-color:var(--letter);
+     border-radius:20px;
+     cursor:pointer;
+     
+     }
+     .container-daynight-small .circle.active{
+     position:absolute;
+     
+     width:25px;
+     height:25px;
+     top:2px;
+     left:2px;
+     border-radius:30px ;
+     background-color:white;
+     transition:0.4s linear;
+     }
+     .container-daynight-small .circle{
+     position:absolute;
+     
+     width:25px;
+     height:25px;
+     top:2px;
+     left:29px;
+     border-radius:30px ;
+     background-color:rgb(41, 40, 40);
+     transition:0.4s linear;
+ 
+ 
+     }
+    
+    @media (min-width:500px){
    .navegador-grande{display:none;}
    .container-correo-grande{display:none;}
    .contacta{visibility:none}
@@ -204,7 +417,7 @@
 
     }
 
- 
+}
 
     @media (min-width:1100px){
 

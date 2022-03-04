@@ -1,11 +1,14 @@
-#objetivo{
+
+
+ #objetivo{
     width:100%;height:70vh;
 }
 
-.white-space{height: 180px;}
+.white-space{height: 60px;}
 #objetivo h1{
     
     text-align:center;
+
     font-size:120px;
     transform:rotate(-5deg);
     color:var(--letter);
@@ -83,6 +86,97 @@
    
      
    }
+@media (min-width: 500px){
+
+
+
+    #objetivo{
+    width:100%;height:70vh;
+}
+
+.white-space{height: 180px;}
+#objetivo h1{
+    
+    text-align:center;
+
+    font-size:120px;
+    transform:rotate(-5deg);
+    color:var(--letter);
+    margin:0px 0 0 0px;
+   
+
+   }
+.container-magic {
+    position:relative;
+    display:block;
+    width:100%;height:auto;
+   
+  
+}
+
+ .magic{
+    
+    position:absolute;
+    width: 100%;height:60px;
+    top:135%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    box-shadow:1px 1px 15px  white;
+    z-index: 2;
+    opacity:1;
+    animation:latidos 2.5s linear infinite;
+    transition:0.4s linear;
+    box-shadow:1px 1px 15px  white;
+    transition:0.4s linear;
+}
+
+
+.magic.active {
+    box-shadow:1px 5px 15px  black;
+
+}
+
+
+@keyframes latidos {
+    0% {
+        opacity:0;
+    }
+    25% {
+        opacity:0.5;
+    }
+
+    50% {
+        opacity:1;
+    }
+   
+    75% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:0;
+    }
+    
+}
+ .magic-text {
+     
+    position:relative;
+    text-align:center;
+    font-size:30px;
+    color:var(--letter);
+    top:0;      
+    
+   }
+   .vivir {
+       
+ position:absolute;
+ width:100%;
+ top:130%;
+ left:50%;
+ transform:translate(-50%, -50%);
+   
+     
+   }
+}
 @media (min-width: 1100px){
 
     #objetivo{

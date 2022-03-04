@@ -85,7 +85,7 @@ proyecto.forEach( (element,index)  => {
          hobby.addEventListener('click' , () =>{
             console.log('first')
             document.querySelector('.container-image').style.opacity='0.8'
-            document.querySelector('.container-image').style.top='-90%'
+            document.querySelector('.container-image').style.top='-60%'
         
             document.querySelector('.container-image').style.left='30%'
             document.querySelector('.container-image').style.transform='rotate(-16deg)'
