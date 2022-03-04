@@ -10,12 +10,20 @@
 
 */
 /* Aquí definimos las Custom properties */
+
 :root {
-  /* --negro: #393939; */
-  /* Tipografía */
-  /* --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana; */
+  --letter:  rgb(165, 162, 162);
+
 }
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Amatic SC',cursive;
+  }
+
 
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
