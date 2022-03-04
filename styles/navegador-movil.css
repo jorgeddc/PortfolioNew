@@ -8,23 +8,74 @@
         width:100%;
         height:50px;
         display:flex;
-        justify-content:space-between;
+        justify-content:space-around;
         align-items:center;
-
+        position:fixed;
+        z-index:1;
+        
     }
     .hamburguer {
-    width: 68px;
-    height: 30px;
-    display: flex;
-    position:relative;
-    left:10px;
-    top:-10px;
-    cursor:pointer;
-    align-items: center; 
-    z-index: 2;
+        width: 68px;
+        height: 30px;
+        display: flex;
+        position:fixed;
+        
+        left:10px;
+        top:0px;
+        cursor:pointer;
+        align-items: center; 
+        z-index: 2;
     }
+    
+    .container-navegador-small{
+        width:390px;
+        height:0px;
+        display:flex;
+        align-items:center;
+        
+       
+        overflow:hidden;
+        transition:0.4s ease-in-out;
+        position:absolute;
+        top:-30px;
+        left:50px;
+        
+       
+       
+    
+        
+        }
+        .container-navegador-small.active{
+       
+        height:200px;
 
+        
+        }
+        .navegador-small {
+        display:flex;
+        text-align:center;
+        justify-content: space-around;
+      
+        
+        }
+    
+    
+        .navegador-small li,.navegador-small a {
+    
+        text-decoration: none;
+        list-style: none;
+        color:var(--letter);
+        font-size:25px;
+        letter-spacing:1px;
+        margin:5px;
+        }
+        .navegador-small li:hover{
+            border-bottom:1px solid var(--letter);
+        }
 
+        .container-correo.active{
+            display:none;
+        }
 .container-correo .correo-s {
     color:var(--letter);
     font-size: 35px;
@@ -106,8 +157,8 @@
 /* DAY NIGTH */
 
     .container-daynight-small{
-    position:relative;
-    right:14px;
+    position:fixed;
+    right:13px;
     width:60px;
     height:30px;
     background-color: black;
@@ -117,7 +168,7 @@
     }
 
     .container-daynight-small.active{
-    position:relative;
+    position:fixed;
     right:14px;
     width:60px;
     height:30px;
@@ -151,37 +202,7 @@
 
     }
 
-    .container-navegador-small{
-    width:100%;
-    height:0px;
-    align-items:center;
-    overflow:hidden;
-    transition:0.4s ease-in-out;
-
-    
-    }
-    .container-navegador-small.active{
-    height:162px;
-    
-    }
-    .navegador-small {
-    
-    text-align:center;
-    margin:0;
-    padding:0;
-    
-    }
-
-
-    .navegador-small li,.navegador-small a {
-
-    text-decoration: none;
-    list-style: none;
-    color:var(--letter);
-    font-size:25px;
-    letter-spacing:1px;
-    margin:15px;
-    }
+ 
 
     @media (min-width:1100px){
 

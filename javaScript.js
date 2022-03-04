@@ -9,21 +9,19 @@ document.addEventListener('DOMContentLoaded',  ()=>{
           const activo = document.querySelector('.activo')
           const activoFondo = document.querySelector('.activo-fondo')
           const hobby =  document.querySelector('.hobby')
-          const viajar =  document.querySelector('.viajar')
+          const showSlide =  document.querySelector('.show-slide')
           const containerSobremi = document.getElementById('sobre-mi')
-          const contenedorSlide = document.querySelectorAll('.slide')
+          const contenedorSlide = document.querySelectorAll('.slidePicture')
           const arrowLeft = document.querySelector('.arrow-left')
           const arrowRight = document.querySelector('.arrow-right')
           const hamburguer = document.querySelector('.hamburguer')
           const proyecto = document.querySelectorAll('.itemP')
+          const containerCorreo = document.querySelector('.container-correo')
          
           const nav = document.querySelector('.navegador-grande')
           
         
-        let pixels =550;
-        let cont=0;
-        let contProgress=0
-        var progres   
+        
         
    
 
@@ -46,17 +44,13 @@ proyecto.forEach( (element,index)  => {
             e.preventDefault()
             
             document.querySelector('body').classList.toggle('active')
-            document.querySelector('.square-container1').classList.toggle('active')
-            document.querySelector('.square-container2').classList.toggle('active')
-            document.querySelector('.square-container3').classList.toggle('active')
+            document.querySelector('.hola').classList.toggle('active')
+            document.querySelector('.desarrollador').classList.toggle('active')
+            document.querySelector('.front').classList.toggle('active')
             document.querySelector('.circle').classList.toggle('active')    
             document.querySelector('.container-daynight-small').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
-            // document.querySelector('.raya1').classList.toggle('active')    
-            // document.querySelector('.raya2').classList.toggle('active')    
-            // document.querySelector('.raya3').classList.toggle('active') 
-            // document.querySelector('.octo-cat').classList.toggle('active')    
-            // document.querySelector('.octo-cato').classList.toggle('active')
+           
             document.querySelector('.octo-cat').classList.toggle('active')    
             document.querySelector('.octo-cat1').classList.toggle('active')    
             document.querySelector('.octo-cat2').classList.toggle('active')      
@@ -68,193 +62,45 @@ proyecto.forEach( (element,index)  => {
           DayNightB.addEventListener('click', (e)=>{
             e.preventDefault()
             document.querySelector('body').classList.toggle('active')
-            document.querySelector('.square-container1').classList.toggle('active')
-            document.querySelector('.square-container2').classList.toggle('active')
-            document.querySelector('.square-container3').classList.toggle('active')
+            document.querySelector('.hola').classList.toggle('active')
+            document.querySelector('.desarrollador').classList.toggle('active')
+            document.querySelector('.front').classList.toggle('active')
             document.querySelector('.circleB').classList.toggle('active')    
             document.querySelector('.container-daynight-big').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
-            // document.querySelector('.raya1').classList.toggle('active')    
-            // document.querySelector('.raya2').classList.toggle('active')    
-            // document.querySelector('.raya3').classList.toggle('active') 
+            
             document.querySelector('.diferent').classList.toggle('active') 
             document.querySelector('.octo-cat').classList.toggle('active')    
             document.querySelector('.octo-cat1').classList.toggle('active')    
             document.querySelector('.octo-cat2').classList.toggle('active')    
             document.querySelector('.magic').classList.toggle('active') 
-            // document.querySelector('.activo').classList.toggle('active') 
-            // document.querySelector('.activo-fondo').classList.toggle('active') 
+           
             document.querySelector('.container-navegador-grande').classList.toggle('active') 
             
-            
-            
-            
-            
-            
-          } )
+            } )
           
           
           
           
-          hobby.addEventListener('mouseover' , () =>{
+         hobby.addEventListener('click' , () =>{
+            console.log('first')
             document.querySelector('.container-image').style.opacity='0.8'
-            document.querySelector('.container-image').style.top='-160px'
+            document.querySelector('.container-image').style.top='-90%'
+        
+            document.querySelector('.container-image').style.left='30%'
             document.querySelector('.container-image').style.transform='rotate(-16deg)'
             
             
           })
           hobby.addEventListener('mouseleave' , () =>{
             document.querySelector('.container-image').style.opacity='0'
-            document.querySelector('.container-image').style.top='0px'
+            document.querySelector('.container-image').style.top='-50px'
           })
           
           
           
-          viajar.addEventListener('click' , e =>{
-            e.preventDefault()
-            document.querySelector('.cuenta').style.display='block'
-            viajar.classList.toggle('active')
-            
-            if(e.target.classList.contains('active')){
-              
-              activaProgres()
-            }
-            
-            if(!e.target.classList.contains('active')){
-              
-              desactivaProgres()
-            }
-            
-            
-            cont++
-            contenedorSlide.forEach( element=>{
-              element.style.transform=`translatex(${cont * -pixels}px)`
-              document.querySelector('.arrow-right').classList.toggle('active')
-              document.querySelector('.arrow-left').classList.toggle('active')
-              document.querySelector('.l1').classList.toggle('active')
-              document.querySelector('.l2').classList.toggle('active')
-              document.querySelector('.r1').classList.toggle('active')
-              document.querySelector('.r2').classList.toggle('active')
-              document.getElementById('sobre-mi').classList.toggle('active')
-              //  document.getElementById('sobre-mi').style.backgroundImage = `url(Espaldas.jpg)`
-              
-              if (cont>=2)
-              {
-                element.style.transform=`translatex(0px)`
-                cont=0;
-                
-              }
-            })
-            
-            
-          })
           
-          arrowLeft.addEventListener('click' , e =>{
-            e.preventDefault()
-            contProgress=0
-            
-            
-            if (cont>=2){// este if no permite pasar al texto de sobre mi
-              if (cont!=0) //este if obliga a dar a viajar para que sume 
-              cont--;
-              
-              
-              contenedorSlide.forEach( element=>{
-                element.style.transform=`translatex(${cont * -pixels}px)`
-                // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
-                
-                let dato = cont * pixels
-                console.log(cont , dato)
-              })
-              
-              
-            }
-          })
-          
-          arrowRight.addEventListener('click' , e =>{
-            e.preventDefault()
-            contProgress=0
-            
-            
-            if (cont!=0) //este if obliga a dar a viajar para que sume 
-            cont++;
-            
-            contenedorSlide.forEach( element=>{
-              arrowRight.style.zIndex='1'
-              element.style.transform=`translatex(${cont * -pixels}px)`
-              // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
-              let dato = cont * -pixels
-              console.log(cont , dato)
-              
-              if (cont>=5)
-              {
-                
-                element.style.transform=`translatex(-2800px)`
-                cont=4
-                
-              }
-              
-            })
-            
-          })
-          
-          
-          function activaProgres()
-          {  progres = setInterval(progressPhoto,50)
-            
-          }
-          
-          function desactivaProgres()
-          { clearInterval(progres)
-            document.querySelector('.cuenta').style.display='none'
-          }
-          
-        function trasladarFoto()
-        { console.log(cont)
-          cont++
-          contenedorSlide.forEach( element=>{
-            arrowRight.style.zIndex='1'
-            element.style.transform=`translatex(${cont * -pixels}px)`
-            // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
-            let dato = cont * -pixels
-            
-            if (cont>=5)
-            {
-              if (cont>=2){// este if no permite pasar al texto de sobre mi
-                
-                cont=1
-                contenedorSlide.forEach( element=>{
-                  element.style.transform=`translatex(${cont * -pixels}px)`
-                  // document.getElementById('sobre-mi').style.backgroundImage = `url(${cont}.jpg)`
-                  
-                  let dato = cont * pixels
-                  console.log(cont , dato)
-                })
-                
-                
-              }
-            }
-            
-          })
-          
-        }
         
-        function progressPhoto () {
-          
-          contProgress++
-          if (contProgress<=100){
-            
-            document.querySelector('.progres').innerHTML = `${contProgress}%` 
-          }
-          
-          if (contProgress==100){
-            
-            trasladarFoto()
-            contProgress=0
-            
-          }
-          
-        }
         
         magic.addEventListener('click', e =>{
           magic.classList.toggle('active')
@@ -296,8 +142,7 @@ proyecto.forEach( (element,index)  => {
                   
                   
                   firstStr = 'Compartir experiencias profesionales.'
-                  
-                  console.log(firstStr.length)
+                 
                   break;
                   
                   
@@ -340,7 +185,7 @@ proyecto.forEach( (element,index)  => {
                       document.querySelector('.barra1').classList.toggle('active')
                       document.querySelector('.barra2').classList.toggle('active')
                       document.querySelector('.container-navegador-small').classList.toggle('active')
-              
+                      containerCorreo.classList.toggle('active')
               
                       })
               const itemS = document.querySelector('.item-s')
@@ -351,6 +196,7 @@ proyecto.forEach( (element,index)  => {
                 document.querySelector('.barra1').classList.remove('active')
                 document.querySelector('.barra2').classList.remove('active')
                 document.querySelector('.container-navegador-small').classList.remove('active')
+                containerCorreo.classList.toggle('active')
 
                 
               })
