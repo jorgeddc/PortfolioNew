@@ -24,7 +24,7 @@
          height:100vh;
          display:grid;
          grid-template-columns:1fr;
-         grid-template-rows:repeat(6 , 1fr);
+         grid-template-rows:repeat(8 , 1fr);
          justify-content:center;
          align-content:center;
          gap:0px;
@@ -81,6 +81,8 @@
      .migracion{grid-row:4}
      .extremeL{}
      .extreme{}
+     .gatheringL{grid-row:7}
+     .gathering{}
 
 
 @media only screen and (min-width:500px){
@@ -165,6 +167,8 @@
     .migracion{grid-column:2; grid-row:2;}
     .extremeL{grid-column:3; grid-row:1;}
     .extreme{grid-column:3; grid-row:2;}
+    .gatheringL{grid-column:4; grid-row:1;}
+    .gathering{grid-column:4; grid-row:2;}
         
     /* GRID END */
     #proyecto h1{
