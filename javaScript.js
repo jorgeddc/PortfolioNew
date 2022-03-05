@@ -54,6 +54,7 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.octo-cat').classList.toggle('active')    
             document.querySelector('.octo-cat1').classList.toggle('active')    
             document.querySelector('.octo-cat2').classList.toggle('active')      
+            document.querySelector('.octo-cat3').classList.toggle('active')      
             
             
             

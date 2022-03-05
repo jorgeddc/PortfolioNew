@@ -357,3 +357,16 @@ background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
 }
+.octo-cat3 {
+    width:75px;height:75px;
+background-image: url('/imagenes/GitHub.png');
+background-size:cover;
+background-position-x: center;
+border-radius:150px;
+}  
+.octo-cat3.active{ 
+background-image: url('/imagenes/octocat.jpg');
+background-size:contain;
+background-repeat: no-repeat;
+background-position-y:center;
+}
