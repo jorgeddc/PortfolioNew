@@ -84,6 +84,39 @@
      .gatheringL{grid-row:7}
      .gathering{}
 
+     .ux-ui{
+         margin-top:50px;
+     }
+
+    .gallery {
+        margin-top:-60px;
+        width:100%;
+        height:auto; 
+        display:grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(5, 1fr);
+        
+    }
+
+.picture{
+    display:flex;
+    width:100%;
+        height:auto;
+        justify-content: center;
+        align-items: center;
+
+} 
+
+
+.picture img {
+    object-fit: contain;
+    width:300px;
+    height:160px;
+}
+     
+
 
 @media only screen and (min-width:500px){
 
