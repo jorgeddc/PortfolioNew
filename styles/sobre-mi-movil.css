@@ -134,11 +134,8 @@ box-shadow:1px 1px 5px var(--letter);
 
 @media(min-width:1100px){
   
-  .white-space{
-    width:0;
-    height:0px;
-}
-#sobre-mi{
+  .white-spaceS{height:150px; }
+  #sobre-mi{
   
     width: 100%;    
     height:80vh;
@@ -147,18 +144,7 @@ box-shadow:1px 1px 5px var(--letter);
    
    
 }  
-#sobre-mi.active{
-  
-    width: 100%;
-    height:100vh;
-   background-image: url('/imagenes/Espaldas.jpg');
-     background-size: cover; 
-    background-repeat: no-repeat;
-    background-position-y: center;
-    transition:1s ease-in-out;
-   
-   
-}  
+
 
   
 
@@ -208,8 +194,8 @@ box-shadow:1px 1px 5px var(--letter);
         align-items:flex-end;
         position:relative;
         z-index: 2;
-        font-size:40px;
-        top:0;
+        font-size:35px;
+        top:-160px;
         color:var(--letter);
         }
         .hobby {
@@ -240,5 +226,73 @@ box-shadow:1px 1px 5px var(--letter);
 
         }
     
+
+}
+
+@media only screen and (min-width:1390px) {
+
+  .container-sobremi{
+    margin-top:110px;
+    display:flex;
+    width:100%;
+    height:200px;
+    flex-direction: column;
+    align-items: center;
+
+    }
+
+
+    .container-sobremi h1 {
+
+    transform:rotate(-5deg);
+    color:var(--letter);
+
+    font-size:190px;
+
+
+    }
+ 
+
+
+    .container-descripcion{
+
+
+    width:100%;
+    height:190px;
+    justify-content:center;
+    align-items:flex-end;
+    position:relative;
+    z-index: 2;
+    font-size:45px;
+    top:-120px;
+    color:var(--letter);
+    }
+    .hobby {
+    color:var(--letter);
+    position:relative;
+    z-index:1;
+    }
+
+
+    .container-image{
+
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    width:350px;
+    height:200px;
+    background-image:url('/imagenes/code.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition:1s ease-in-out;
+    opacity:0;
+    box-shadow:1px 1px 5px var(--letter);;
+    pointer-events: none;
+
+
+
+
+    }
 
 }

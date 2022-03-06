@@ -50,6 +50,9 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.circle').classList.toggle('active')    
             document.querySelector('.container-daynight-small').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
+            document.querySelector('.hola').classList.toggle('active')
+            document.querySelector('.front').classList.toggle('active')
+
            
             document.querySelector('.octo-cat').classList.toggle('active')    
             document.querySelector('.octo-cat1').classList.toggle('active')    
@@ -69,6 +72,8 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.circleB').classList.toggle('active')    
             document.querySelector('.container-daynight-big').classList.toggle('active')
             document.querySelector('.curriculum').classList.toggle('active')
+            document.querySelector('.hola').classList.toggle('active')
+            document.querySelector('.front').classList.toggle('active')
             
             document.querySelector('.diferent').classList.toggle('active') 
             document.querySelector('.octo-cat').classList.toggle('active')    
@@ -185,7 +190,7 @@ proyecto.forEach( (element,index)  => {
                       document.querySelector('.barra0').classList.toggle('active')
                       document.querySelector('.barra1').classList.toggle('active')
                       document.querySelector('.barra2').classList.toggle('active')
-                      document.querySelector('.container-navegador-small').classList.toggle('active')
+                      document.querySelector('.navegador-small').classList.toggle('active')
                       containerCorreo.classList.toggle('active')
               
                       })
@@ -196,7 +201,7 @@ proyecto.forEach( (element,index)  => {
                 document.querySelector('.barra0').classList.remove('active')
                 document.querySelector('.barra1').classList.remove('active')
                 document.querySelector('.barra2').classList.remove('active')
-                document.querySelector('.container-navegador-small').classList.remove('active')
+                document.querySelector('.navegador-small').classList.remove('active')
                 containerCorreo.classList.toggle('active')
 
                 

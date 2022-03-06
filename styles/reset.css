@@ -88,9 +88,10 @@ time, mark, audio, video,::-webkit-inner-spin-button {
     vertical-align: baseline; 
      font-family: 'Amatic SC',cursive; 
 
-color:var(--color-letter);  
+
    
 }
+
 
 
 /* Evitamos problemas con las imagenes */

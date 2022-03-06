@@ -180,13 +180,17 @@
 @media only screen and (min-width:1000px){
 
     /* GRID */
-    .container-proyectos{
+
+    .white-spaceP{
+        height:200px;
+    }
+     .container-proyectos{
         display:grid;
-        grid-template-columns:repeat(3,1fr) ;
-        grid-template-rows:repeat(2,1fr);
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows:repeat(4,1fr);
         gap:5px;
         text-align:center;
-    }    
+    }    /*
           
     .proyecto{
         width:100%;
@@ -194,17 +198,20 @@
       
         font-size:150px;
     }
-    .masterL{grid-column:1;grid-row:1}
+   */
+   .masterL{grid-column:1;grid-row:1}
     .master{grid-column:1;grid-row:2}
     .migracionL{grid-column:2; grid-row:1;}
     .migracion{grid-column:2; grid-row:2;}
-    .extremeL{grid-column:3; grid-row:1;}
-    .extreme{grid-column:3; grid-row:2;}
-    .gatheringL{grid-column:4; grid-row:1;}
-    .gathering{grid-column:4; grid-row:2;}
+    .extremeL{grid-column:1; grid-row:3;}
+    .extreme{grid-column:1; grid-row:4;}
+    .gatheringL{grid-column:2; grid-row:3;}
+    .gathering{grid-column:2; grid-row:4;} 
         
     /* GRID END */
     #proyecto h1{
+        position:relative;
+        top:20px;
         text-align:center;
         font-size:190px;
         transform:rotate(-5deg);
@@ -251,10 +258,70 @@
             }
             }
         
-         
-
-}
-
+        
+            .gallery {
+                margin-top:-60px;
+                width:100%;
+                height:auto; 
+                display:grid;
+                justify-content: center;
+                align-content: center;
+                grid-template-columns: 1fr;
+                grid-template-rows:repeat(5, 1fr);
+                gap:10px;
+                
+            }
+        
+            .picture{
+                display:flex;
+                width:100%;
+                height:auto;
+                justify-content: center;
+                align-items: center;
+                
+            } 
+            
+            
+            .picture img {
+                object-fit:cover;
+                width:500px;
+                height:250px;
+            }           
+            
+        }
+        
+        @media only screen and (min-width:1390px) {
+        
+            .gallery {
+                margin-top:-60px;
+                width:100%;
+                height:auto; 
+                display:grid;
+                justify-content: center;
+                align-content: center;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:repeat(3, 1fr);
+                gap:10px;
+                
+            }
+        
+            .picture{
+                display:flex;
+                width:100%;
+                height:auto;
+                justify-content: center;
+                align-items: center;
+                
+            } 
+            
+            
+            .picture img {
+                object-fit:cover;
+                width:500px;
+                height:250px;
+            }  
+        
+        }
 
 
 
@@ -311,7 +378,6 @@ top:10px;
 top:-20px;
 }
 }
-
 
 
 
