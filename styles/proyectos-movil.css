@@ -185,6 +185,7 @@
         grid-template-rows:repeat(4,1fr);
         gap:5px;
         text-align:center;
+      
     }    /*
           
     .proyecto{
@@ -374,16 +375,40 @@ top:-20px;
 }
 }
 
+.git{
+   
+    display:flex;
+    flex-direction: center;
+    align-items: center;
+    width:90px;
+    height: 90px;
+    border:4px solid black;
+    border-radius: 100px;
+    position: relative;
+    top:-20px;
+    margin-left:18px;
+    
+}
 
+.git p {
+   margin-left:18px;
+   font-size:25px;
+}
 
-.octo-cat {
+.git:hover {
+    color:black;
+    background-color:var(--letter);
+    
+}
+
+/* .octo-cat {
     width:75px;height:75px;
 background-image: url('/imagenes/GitHub.png');
 background-size:cover;
 background-position-x: center;
 border-radius:150px;
-}  
-/* .octo-cat.active{ 
+} 
+ .octo-cat.act{ 
 background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
@@ -391,7 +416,7 @@ background-position-y:center;
 
 
 
-} */
+} 
 .octo-cat1 {
     width:75px;height:75px;
 background-image: url('/imagenes/GitHub.png');
@@ -399,12 +424,12 @@ background-size:cover;
 background-position-x: center;
 border-radius:150px;
 }  
-/* .octo-cat1.active{ 
+.octo-cat1.act{ 
 background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
-} */
+}
 .octo-cat2 {
     width:75px;height:75px;
 background-image: url('/imagenes/GitHub.png');
@@ -412,12 +437,12 @@ background-size:cover;
 background-position-x: center;
 border-radius:150px;
 }  
-/* .octo-cat2.active{ 
+.octo-cat2.active{ 
 background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
-} */
+}
 .octo-cat3 {
     width:75px;height:75px;
 background-image: url('/imagenes/GitHub.png');
@@ -425,19 +450,19 @@ background-size:cover;
 background-position-x: center;
 border-radius:150px;
 }  
-/* .octo-cat3.active{ 
+.octo-cat3.active{ 
 background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
-} */
+}
 .octo-cat4 {
     width:75px;height:75px;
 background-image: url('/imagenes/GitHub.png');
 background-size:cover;
 background-position-x: center;
 border-radius:150px;
-}  
+}   */
 /* .octo-cat4.active{ 
 background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
