@@ -384,7 +384,7 @@ background-position-x: center;
 border-radius:150px;
 }  
 .octo-cat.active{ 
-background-image: url('/imagenes/octocat.jpg');
+background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
@@ -400,7 +400,7 @@ background-position-x: center;
 border-radius:150px;
 }  
 .octo-cat1.active{ 
-background-image: url('/imagenes/octocat.jpg');
+background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
@@ -413,7 +413,7 @@ background-position-x: center;
 border-radius:150px;
 }  
 .octo-cat2.active{ 
-background-image: url('/imagenes/octocat.jpg');
+background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
@@ -426,7 +426,7 @@ background-position-x: center;
 border-radius:150px;
 }  
 .octo-cat3.active{ 
-background-image: url('/imagenes/octocat.jpg');
+background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
@@ -439,8 +439,9 @@ background-position-x: center;
 border-radius:150px;
 }  
 .octo-cat4.active{ 
-background-image: url('/imagenes/octocat.jpg');
+background-image: url('/imagenes/Octocat.jpg');
 background-size:contain;
 background-repeat: no-repeat;
 background-position-y:center;
 }
+
