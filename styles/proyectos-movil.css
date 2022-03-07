@@ -82,7 +82,8 @@
         }
         
         .git p {
-           margin-left:32px;
+           position:absolute;
+           left:29px;
            font-size:25px;
         }
         
@@ -402,7 +403,7 @@ top:-20px;
 }
 }
 
-.git{
+/* .git{
    
     display:flex;
     flex-direction: center;
@@ -426,7 +427,7 @@ top:-20px;
     color:black;
     background-color:var(--letter);
     
-}
+} */
 
 /* .octo-cat {
     width:75px;height:75px;
