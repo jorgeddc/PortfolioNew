@@ -52,11 +52,11 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.curriculum').classList.toggle('active')
             document.querySelector('.hola').classList.toggle('active')
             document.querySelector('.front').classList.toggle('active')
-            document.querySelector('.octo-cat').classList.toggle('active')    
-            document.querySelector('.octo-cat1').classList.toggle('active')    
-            document.querySelector('.octo-cat2').classList.toggle('active')      
-            document.querySelector('.octo-cat3').classList.toggle('active')      
-            document.querySelector('.octo-cat4').classList.toggle('active')      
+            // document.querySelector('.octo-cat').classList.toggle('active')    
+            // document.querySelector('.octo-cat1').classList.toggle('active')    
+            // document.querySelector('.octo-cat2').classList.toggle('active')      
+            // document.querySelector('.octo-cat3').classList.toggle('active')      
+            // document.querySelector('.octo-cat4').classList.toggle('active')      
 
            
             
@@ -76,10 +76,10 @@ proyecto.forEach( (element,index)  => {
             document.querySelector('.hola').classList.toggle('active')
             document.querySelector('.front').classList.toggle('active')
             document.querySelector('.diferent').classList.toggle('active') 
-            document.querySelector('.octo-cat').classList.toggle('active')    
-            document.querySelector('.octo-cat1').classList.toggle('active')    
-            document.querySelector('.octo-cat2').classList.toggle('active')    
-            document.querySelector('.octo-cat3').classList.toggle('active')    
+            // document.querySelector('.octo-cat').classList.toggle('active')    
+            // document.querySelector('.octo-cat1').classList.toggle('active')    
+            // document.querySelector('.octo-cat2').classList.toggle('active')    
+            // document.querySelector('.octo-cat3').classList.toggle('active')    
           
             document.querySelector('.magic').classList.toggle('active') 
             document.querySelector('.container-navegador-grande').classList.toggle('active') 
