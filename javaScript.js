@@ -92,7 +92,7 @@ proyecto.forEach( (element,index)  => {
           
           
          hobby.addEventListener('click' , () =>{
-            console.log('first')
+            console.log('2')
             document.querySelector('.container-image').style.opacity='0.8'
             document.querySelector('.container-image').style.top='-60%'
         
