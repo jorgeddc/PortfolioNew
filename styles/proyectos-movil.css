@@ -126,12 +126,13 @@
         height:auto;
         justify-content: center;
         align-items: center;
-
-} 
-
-
-.picture img {
-    object-fit: contain;
+        
+    } 
+    
+    
+    .picture img {
+        object-fit: contain;
+        cursor:not-allowed;
     width:300px;
     height:160px;
 }
