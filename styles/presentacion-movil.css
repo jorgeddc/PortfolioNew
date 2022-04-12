@@ -26,10 +26,6 @@ body {
     text-shadow: 1px 4px 5px  var(--letter);
     
 }
-.hola p{
-   
-
-}
 
 .desarrollador{
     width:105%;
@@ -155,7 +151,7 @@ animation:textoholaSoyJorge 1.1s linear;
 .front {
     text-shadow: 1px 4px 5px  var(--letter);
     position:absolute;
-    top:380px;
+    top:560px;
     font-size:80px;
     animation:textoFrontEnd 1s linear;
  
@@ -183,10 +179,10 @@ animation:textoholaSoyJorge 1.1s linear;
 
 @keyframes textoFrontEnd{
  0%{
-     top:250px;
+     top:350px;
  }
  100%{
-     top:380px;
+     top:560px;
  }
 }
 
