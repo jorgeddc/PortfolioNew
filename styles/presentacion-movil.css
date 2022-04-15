@@ -98,7 +98,7 @@ body {
     .front {
  
         position:absolute;
-        top:330px;
+        top:230px;
         font-size:80px;
         animation:textoFrontEnd 1s linear;
        
@@ -108,7 +108,7 @@ body {
             top:250px;
         }
         100%{
-            top:330px;
+            top:230px;
         }
        }
 }
