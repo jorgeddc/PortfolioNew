@@ -98,7 +98,7 @@ body {
     .front {
  
         position:absolute;
-        top:230px;
+        top:330px;
         font-size:80px;
         animation:textoFrontEnd 1s linear;
        
@@ -108,7 +108,7 @@ body {
             top:250px;
         }
         100%{
-            top:230px;
+            top:330px;
         }
        }
 }
@@ -151,7 +151,7 @@ animation:textoholaSoyJorge 1.1s linear;
 .front {
     text-shadow: 1px 4px 5px  var(--letter);
     position:absolute;
-    top:560px;
+    top:390px;
     font-size:80px;
     animation:textoFrontEnd 1s linear;
  
@@ -182,7 +182,7 @@ animation:textoholaSoyJorge 1.1s linear;
      top:350px;
  }
  100%{
-     top:560px;
+     top:390px;
  }
 }
 
